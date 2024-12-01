@@ -13,7 +13,7 @@ st.set_page_config(
 
 #Formulário de Login
 with st.form("login_form"):
-    st.image("imagens\logotipo.png", caption = "Logotipo Frangoeste")
+    st.image("C:\Users\DELL\Desktop\App zancheta\imagens\logotipo.png", caption = "Logotipo Frangoeste")
     st.subheader("Controle de descartes")
     st.divider()
     
