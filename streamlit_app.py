@@ -13,7 +13,8 @@ st.set_page_config(
 
 #Formulário de Login
 with st.form("login_form"):
-    st.write("Login")
+    st.image("imagens/logotipo.png", caption = "Logotipo Frangoeste")
+    st.subheader("Controle de descartes")
     st.divider()
     
     st.text_input("Nome de usuario:")
@@ -22,7 +23,6 @@ with st.form("login_form"):
     
     st.form_submit_button(
         label = "Entrar",
-        help = "Precisa de ajuda?",
         on_click = None,
         type = "primary"
     )
