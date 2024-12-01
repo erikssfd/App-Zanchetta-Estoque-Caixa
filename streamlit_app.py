@@ -9,4 +9,5 @@ st.title("Frangoeste - Controle de descartes")
 
 #Menu lateral
 with st.sidebar:
-    st.write("Menu Lateral")
+    with st.echo():
+        st.title("Seja Bem-Vindo")
