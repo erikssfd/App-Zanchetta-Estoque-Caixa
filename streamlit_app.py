@@ -3,7 +3,7 @@
 #Configurações principais
 st.set_page_config(
     page_title = "Frangoeste - Contorle de Descartes",
-    page_icon = "",
+    page_icon = ":chicken:",
     layout = "wide",
 )
 
