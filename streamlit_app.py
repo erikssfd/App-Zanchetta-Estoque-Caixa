@@ -27,6 +27,6 @@ with st.form("login_form"):
         type = "primary"
     )
 
-pagina1 = st.page(str = "home", path = "paginas/home.py")
-pagina2 = st.page(str = "configuração", path = "paginas/configuracoes.py")
-pagina3 = st.page(str = "relatorios", path = "paginas/relatorios.py")
+pagina1 = st.Page(str = "home", path = "paginas/home.py")
+pagina2 = st.Page(str = "configuração", path = "paginas/configuracoes.py")
+pagina3 = st.Page(str = "relatorios", path = "paginas/relatorios.py")
