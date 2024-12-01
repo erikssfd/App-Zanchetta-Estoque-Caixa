@@ -26,8 +26,3 @@ with st.form("login_form"):
         on_click = None,
         type = "primary"
     )
-
-if st.button("Home"):
-    st.switch_page("streamlit_app.py")
-if st.button("Page 1"):
-    st.switch_page("paginas/home.py")
