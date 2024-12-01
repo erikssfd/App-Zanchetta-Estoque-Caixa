@@ -30,3 +30,7 @@ with st.form("login_form"):
 pagina1 = st.switch_page("paginas/home.py")
 pagina2 = st.switch_page("paginas/configuracoes.py")
 pagina3 = st.switch_page("paginas/relatorios.py")
+
+st.write(pagina1)
+st.write(pagina2)
+st.write(pagina3)
