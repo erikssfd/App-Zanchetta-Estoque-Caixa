@@ -13,7 +13,10 @@ st.set_page_config(
 
 #Formulário de Login
 with st.form("login_form"):
-    st.image(image = "imagens/logotipo.png", caption = "Frangoeste")
+    #imagem de logotipo
+    img_logo = "imagens/logotipo.png"
+    st.image(image = img_logo, caption = "Frangoeste")
+    
     st.subheader("Controle de descartes")
     st.divider()
     
