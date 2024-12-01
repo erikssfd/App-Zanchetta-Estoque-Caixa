@@ -9,5 +9,15 @@ st.title("Frangoeste - Controle de descartes")
 
 #Menu lateral
 with st.sidebar:
-    with st.echo():
-        st.title("Seja Bem-Vindo")
+    st.header("Seja Bem-Vindo")
+    st.divider()
+    
+    st.text("Papelão")
+    
+    forn_op = st.selectbox(
+        "Forncedores",
+        ("WestRock", "Sopasta", "Klabin"),
+        index = None,
+        placeholder = "Selecione um fornecedor:"
+    )
+    st.write("Voce selecionou o fornecedor: ", forn_op)
