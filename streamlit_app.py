@@ -1,16 +1,15 @@
 #Pagina de Login
 
+#Importações
+import streamlit as st
+import time
+
 #Configurações principais
 st.set_page_config(
     page_title = "Frangoeste - Contorle de Descartes",
     page_icon = ":chicken:",
     layout = "wide",
 )
-
-
-#Importações
-import streamlit as st
-import time
 
 #Formulário de Login
 with st.form("login_form"):
