@@ -16,7 +16,7 @@ login_form = st.form("index_form")
 
 
 #Formulário de Login
-with st.sidebar():
+with st.sidebar("menu_lateral"):
     with login_form:
         login_form.st.write("Frangoeste - Controle de descartes")
 
