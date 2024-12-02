@@ -8,7 +8,7 @@ import time
 st.set_page_config(
     page_title = "Frangoeste - Controle de Descartes",
     page_icon = ":chicken:",
-    layout = "wide",
+    layout = "centered",
 )
 
 #Definindo uma variavel para ficar com o formulário
@@ -25,11 +25,13 @@ with st.sidebar:
             type = "default",
             placeholder = "Usuário"
             )
+        
         st.text_input(
             label = "Senha:",
             type = "password",
             placeholder = "Senha"
             )
+        
         st.form_submit_button(
             label = "Entrar",
             type = "primary",
