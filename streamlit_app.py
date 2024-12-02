@@ -13,7 +13,7 @@ st.set_page_config(
 
 #Definindo uma variavel para ficar com o formulário
 login_form = st.form("index_form")
-col1, col2 = st.columns([1, 4])
+col1, col2 = st.columns([1, 4], gap = "large")
 
 
 #Formulário de Login
