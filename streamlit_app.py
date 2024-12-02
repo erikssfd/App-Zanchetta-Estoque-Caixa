@@ -13,10 +13,11 @@ st.set_page_config(
 
 #Definindo uma variavel para ficar com o formulário
 login_form = st.form("index_form")
+col1, col2 = st.columns([1, 4])
 
 
 #Formulário de Login
-with st.sidebar:
+with col1:
     titulo = st.title("Frangoeste - Controle de descartes")
     botao_login = login_form.form_submit_button(
         label = "Entrar",
