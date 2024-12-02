@@ -17,7 +17,7 @@ with st.form("login_form"):
     #img_logo = "imagens/logotipo.png"
     #st.image(image = img_logo, caption = "Frangoeste")
     
-    st.subheader("Controle de descartes")
+    st.markdown('<style>Controle de Descartes</style>', unsafe_allow_html = True)
     st.divider()
     
     st.text_input("Nome de usuario:")
