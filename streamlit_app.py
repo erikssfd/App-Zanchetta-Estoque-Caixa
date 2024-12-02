@@ -6,26 +6,32 @@ import time
 
 #Configurações principais
 st.set_page_config(
-    page_title = "Frangoeste - Contorle de Descartes",
+    page_title = "Frangoeste - Controle de Descartes",
     page_icon = ":chicken:",
     layout = "wide",
 )
 
+#Definindo uma variavel para ficar com o formulário
+login_form = st.form("index_form")
+
+
 #Formulário de Login
-with st.form("login_form"):
-    #imagem de logotipo
-    #img_logo = "imagens/logotipo.png"
-    #st.image(image = img_logo, caption = "Frangoeste")
-    
-    st.markdown('<style>Controle de Descartes</style>', unsafe_allow_html = True)
-    st.divider()
-    
-    st.text_input("Nome de usuario:")
-    st.text_input("Senha")
-    st.divider()
-    
-    st.form_submit_button(
-        label = "Entrar",
-        on_click = None,
-        type = "primary"
-    )
+with st.sidebar():
+    with login_form:
+        login_form.st.write("Frangoeste - Controle de descartes")
+
+        login_form.st.text_input(
+            label = "Nome de Usuário:",
+            type = "default",
+            placeholder = "Usuário"
+            )
+        login_form.st.text_input(
+            label = "Senha:",
+            type = "password",
+            placeholder = "Senha"
+            )
+        login_form.st.submit_button(
+            label = "Entrar",
+            type = "primary",
+            help = "Pressione para logar!"
+            )
