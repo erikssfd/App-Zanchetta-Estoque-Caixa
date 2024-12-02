@@ -17,23 +17,4 @@ login_form = st.form("index_form")
 
 #Formulário de Login
 with st.sidebar:
-    with login_form:
-        st.title("Frangoeste - Controle de descartes")
-    
-        st.text_input(
-            label = "Nome de Usuário:",
-            type = "default",
-            placeholder = "Usuário"
-            )
-        
-        st.text_input(
-            label = "Senha:",
-            type = "password",
-            placeholder = "Senha"
-            )
-        
-        st.form_submit_button(
-            label = "Entrar",
-            type = "primary",
-            help = "Pressione para logar!"
-            )
+    login_form.title("Frangoeste - Controle de descartes")
