@@ -12,25 +12,25 @@ st.set_page_config(
 )
 
 #Definindo uma variavel para ficar com o formulário
-#login_form = st.form("index_form")
+login_form = st.form("index_form")
 
 
 #Formulário de Login
-#with st.sidebar:
-#    login_form.title("Frangoeste - Controle de descartes")
-#    login_form.form_submit_button(
-#        label = "Entrar",
-#        type = "secondary"
-#        )
+with st.sidebar:
+    titulo = st.title("Frangoeste - Controle de descartes")
+    botao_login = st.form_submit_button(
+        label = "Entrar",
+        type = "secondary"
+        )
 
-add_selectbox = st.sidebar.selectbox(
-    "How would you like to be contacted?",
-    ("Email", "Home phone", "Mobile phone")
-)
+#add_selectbox = st.sidebar.selectbox(
+#    "How would you like to be contacted?",
+#    ("Email", "Home phone", "Mobile phone")
+#)
 
 # Using "with" notation
-with st.sidebar:
-    add_radio = st.radio(
-        "Choose a shipping method",
-        ("Standard (5-15 days)", "Express (2-5 days)")
-    )
+#with st.sidebar:
+#    add_radio = st.radio(
+#        "Choose a shipping method",
+#        ("Standard (5-15 days)", "Express (2-5 days)")
+#    )
