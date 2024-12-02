@@ -18,19 +18,19 @@ login_form = st.form("index_form")
 #Formulário de Login
 with st.sidebar:
     with login_form:
-        login_form.st.write("Frangoeste - Controle de descartes")
+        st.title("Frangoeste - Controle de descartes")
     
-        login_form.st.text_input(
+        st.text_input(
             label = "Nome de Usuário:",
             type = "default",
             placeholder = "Usuário"
             )
-        login_form.st.text_input(
+        st.text_input(
             label = "Senha:",
             type = "password",
             placeholder = "Senha"
             )
-        login_form.st.submit_button(
+        st.submit_button(
             label = "Entrar",
             type = "primary",
             help = "Pressione para logar!"
