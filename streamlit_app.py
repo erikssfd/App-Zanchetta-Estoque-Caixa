@@ -30,7 +30,7 @@ with st.sidebar:
             type = "password",
             placeholder = "Senha"
             )
-        st.submit_button(
+        st.form_submit_button(
             label = "Entrar",
             type = "primary",
             help = "Pressione para logar!"
