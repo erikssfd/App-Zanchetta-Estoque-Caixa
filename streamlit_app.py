@@ -18,3 +18,7 @@ login_form = st.form("index_form")
 #Formulário de Login
 with st.sidebar:
     login_form.title("Frangoeste - Controle de descartes")
+    login_form.form_submit_button(
+        label = "Entrar",
+        type = "secondary"
+        )
