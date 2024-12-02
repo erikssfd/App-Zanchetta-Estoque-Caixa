@@ -23,6 +23,10 @@ with col1:
         label = "Entrar",
         type = "secondary"
         )
+with col2:
+    texto_col2 = st.title("Seja bem-vindo")
+    subtitulo_col2 = st.subheader("Controle de produção e descartes")
+    #imagem_fundo = st.image()
 
 #add_selectbox = st.sidebar.selectbox(
 #    "How would you like to be contacted?",
