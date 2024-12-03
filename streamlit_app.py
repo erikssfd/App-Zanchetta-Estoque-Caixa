@@ -4,6 +4,10 @@
 import streamlit as st
 import time
 
+#Importando arquivo CSS
+with open("estilo.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
+    
 #Configurações principais
 st.set_page_config(
     page_title = "Frangoeste - Controle de Descartes",
