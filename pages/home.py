@@ -5,7 +5,7 @@ import time
 
 # Configurações Principais da Página
 
-#Estilo da página
+# Estilo da página
 st.markdown(
     """
     <style>
