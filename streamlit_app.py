@@ -1,45 +1,100 @@
-#Pagina de Login
-
 #Importações
 import streamlit as st
 import time
 
-#Importando arquivo CSS
-with open("estilo.css") as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
+# Configurações Principais da Página
+st.set_page_config("Frangoeste - Controle de descartes", page_icon = ":chicken:", layout = "wide")
+
+#Estilo da página
+st.markdown(
+    """
+    <style>
+        section[data-testid="stSidebar"] {
+            display: none !important;
+        }
     
-#Configurações principais
-st.set_page_config(
-    page_title = "Frangoeste - Controle de Descartes",
-    page_icon = ":chicken:",
-    layout = "centered",
+        .stFormSubmitButton > button{
+            transition: 0.5s;
+        }
+        
+        .stFormSubmitButton > button:hover {
+            background-color: blue !important;
+            transition: 0.6s;
+        }
+        
+        .stForm {
+            border: none !important;
+            transition: 0.8s;
+        }
+        
+        
+        /*Tablets*/
+        @media (max-width: 1024px){
+            section[data-testid="stSidebar"] {
+                display: none !important;
+            }
+        }
+        
+        /*Smartphones Grandes e Médios*/
+        @media (max-width: 767px) {
+            
+            section[data-testid="stSidebar"] {
+                display: none !important;
+            }
+        }
+        
+        /*Smartphones Pequenos*/
+        @media (max-width: 479px) {
+            
+            section[data-testid="stSidebar"] {
+                display: none !important;
+            }
+        }
+        
+    </style>
+    """,
+    unsafe_allow_html=True,
 )
 
-#Definindo uma variavel para ficar com o formulário
-login_form = st.form("index_form")
-col1, col2 = st.columns([1, 4], gap = "large")
+def login():
+    # Definindo uma variavel para ficar com o formulário
+    login_form = st.form("index_form")
+    
+    # Botão recuperar acesso
+    btn_recuperar = st.link_button
 
+    # Imagem e Textos
+    logotipo = "imagens/logotipo.png"
 
-#Formulário de Login
-with col1:
-    titulo = st.title("Frangoeste - Controle de descartes")
-    botao_login = login_form.form_submit_button(
-        label = "Entrar",
-        type = "secondary"
-        )
-with col2:
-    texto_col2 = st.title("Seja bem-vindo")
-    subtitulo_col2 = st.subheader("Controle de produção e descartes")
-    #imagem_fundo = st.image()
+    # Formulário de Login
+    with login_form:
+        
+        st.image(logotipo, width = 350)
+        nome_usuario = st.text_input("Nome de usuario:", key = "user_name")
+        senha_usuario = st.text_input("Senha:", type = "password", key = "user_pass")
+        
+        botao_login = login_form.form_submit_button(
+            label = "Entrar",
+            type = "primary",
+            )
+        
+        st.divider()
+        
+        # Link para recuperar acesso
+        btn_recuperar("Recuperar Acesso", "pages/recuperacao.py")
+        
+        # Configurações (BACKEND)
+        if botao_login:
+            
+            if nome_usuario == "" or senha_usuario == "":
+                st.warning("Por favor verifique se existem campos em branco! :warning:")
+                
+            elif nome_usuario == "ubiratansilva" and senha_usuario == "ok":
+                st.switch_page("pages/home.py")
+                st.session_state.user_name
+                
+            else:
+                st.error("Senha e usuarios invalidos! :red_circle:")
 
-#add_selectbox = st.sidebar.selectbox(
-#    "How would you like to be contacted?",
-#    ("Email", "Home phone", "Mobile phone")
-#)
-
-# Using "with" notation
-#with st.sidebar:
-#    add_radio = st.radio(
-#        "Choose a shipping method",
-#        ("Standard (5-15 days)", "Express (2-5 days)")
-#    )
+# Estanciando a Página de login
+login()
