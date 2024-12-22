@@ -86,6 +86,9 @@ def login():
             
             if nome_usuario == "" or senha_usuario == "":
                 st.warning("Por favor verifique se existem campos em branco! :warning:")
+
+            if "usuario_nome" not in st.session_state:
+                st.session_state.usuario_nome = nome_usuario
             
             if nome_usuario == "ubiratansilva" and senha_usuario == "ok" or nome_usuario == "admin" and senha_usuario == "admin":
                 st.switch_page("pages/home.py")
