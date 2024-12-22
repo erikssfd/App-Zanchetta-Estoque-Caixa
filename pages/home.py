@@ -6,3 +6,5 @@ def home():
     st.markdown(
         "Possuo algumas opções bem interessantes que possa lhe interessar."
     )
+
+home()
