@@ -1,16 +1,8 @@
 #Importações
 import streamlit as st
-<<<<<<< HEAD
 # Configurações Principais da Página
 st.set_page_config("Frangoeste - Controle de descartes", page_icon = ":chicken:", layout = "wide")
 
-=======
-import time
-
-# Configurações Principais da Página
-st.set_page_config("Frangoeste - Controle de descartes", page_icon = ":chicken:", layout = "wide")
-
->>>>>>> refs/remotes/origin/main
 #Estilo da página
 st.markdown(
     """
