@@ -1,0 +1,23 @@
+*{margin: 0 auto; padding: 0; }
+
+.info_data {
+    background-color: aliceblue !important;
+    text-align: center;
+    text-size-adjust: inherit;
+}
+
+.info_pessoas {
+    background-color: aqua;
+}
+
+.info_material {
+    background-color: grey;
+}
+
+.info_motivo {
+    background-color: blue;
+}
+
+.info_criador {
+    background-color: blueviolet;
+}

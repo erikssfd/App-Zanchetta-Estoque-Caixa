@@ -1,0 +1,14 @@
+[[pages]]
+path = "home.py"
+name = "Tela Inicial"
+icon = ""
+
+[[pages]]
+path = "configuracoes.py"
+name = "Configurações"
+icon = ":wrench:"
+
+[[pages]]
+path = "home.py"
+name = "Relatórios e Métricas"
+icon = ":notebook:"

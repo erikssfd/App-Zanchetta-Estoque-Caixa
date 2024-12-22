@@ -1,7 +1,16 @@
+#Importações
 import streamlit as st
+<<<<<<< HEAD
 # Configurações Principais da Página
 st.set_page_config("Frangoeste - Controle de descartes", page_icon = ":chicken:", layout = "wide")
 
+=======
+import time
+
+# Configurações Principais da Página
+st.set_page_config("Frangoeste - Controle de descartes", page_icon = ":chicken:", layout = "wide")
+
+>>>>>>> refs/remotes/origin/main
 #Estilo da página
 st.markdown(
     """
@@ -61,7 +70,11 @@ def login():
     btn_recuperar = st.link_button
 
     # Imagem e Textos
+<<<<<<< HEAD
     logotipo = "images/logotipo.png"
+=======
+    logotipo = "imagens/logotipo.png"
+>>>>>>> refs/remotes/origin/main
 
     # Formulário de Login
     with login_form:
@@ -88,7 +101,11 @@ def login():
                 
             elif nome_usuario == "ubiratansilva" and senha_usuario == "ok":
                 st.switch_page("pages/home.py")
+<<<<<<< HEAD
                 nome_user = st.session_state.user_name
+=======
+                st.session_state.user_name
+>>>>>>> refs/remotes/origin/main
                 
             else:
                 st.error("Senha e usuarios invalidos! :red_circle:")
