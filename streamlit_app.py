@@ -88,7 +88,7 @@ def login():
                 
             elif nome_usuario == "ubiratansilva" and senha_usuario == "ok":
                 st.switch_page("pages/home.py")
-                st.session_state.user_name
+                nome_user = st.session_state.user_name
                 
             else:
                 st.error("Senha e usuarios invalidos! :red_circle:")

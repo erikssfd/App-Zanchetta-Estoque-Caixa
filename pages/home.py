@@ -1,6 +1,5 @@
 #Importações
 import streamlit as st
-from st_pages import add_page_title, get_nav_from_toml
 import time
 
 # Configurações Principais da Página
@@ -14,7 +13,7 @@ st.markdown(
         
         /*Tablets*/
         @media (max-width: 1024px) {
-            
+        
         }
         
         /*Smartphones Grandes e Médios*/
@@ -35,19 +34,9 @@ st.markdown(
 #Inicio Tela home
 
 def home():
-    
-    # Paginas laterais
-    sections = st.sidebar.toggle("Sections", value=False, key="opsections")
-    
-    nav = get_nav_from_toml(
-       "../pages.toml" if sections else "../sect_pages.toml"
-    )
-    
-    # Estanciando as paginas
-    paginas = st.navigation(nav)
-    
-    add_page_title(paginas)
-    
-    paginas.run()
-    
+
+    # Iniciando um tela de orientações do usuário
+
+    st.markdown("*Gostaria de utilizar algum recurso? * " + st.session_state.nome_user)
+
 home()
