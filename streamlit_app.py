@@ -86,10 +86,12 @@ def login():
             
             if nome_usuario == "" or senha_usuario == "":
                 st.warning("Por favor verifique se existem campos em branco! :warning:")
-                
+            
+            if "user_name" not in st.session_state:
+                st.session_state.user_name = nome_usuario
+
             elif nome_usuario == "ubiratansilva" and senha_usuario == "ok":
                 st.switch_page("pages/home.py")
-                st.session_state.user_name
                 
             else:
                 st.error("Senha e usuarios invalidos! :red_circle:")
