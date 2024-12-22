@@ -70,11 +70,7 @@ def login():
     btn_recuperar = st.link_button
 
     # Imagem e Textos
-<<<<<<< HEAD
     logotipo = "images/logotipo.png"
-=======
-    logotipo = "imagens/logotipo.png"
->>>>>>> refs/remotes/origin/main
 
     # Formulário de Login
     with login_form:
@@ -101,11 +97,7 @@ def login():
                 
             elif nome_usuario == "ubiratansilva" and senha_usuario == "ok":
                 st.switch_page("pages/home.py")
-<<<<<<< HEAD
-                nome_user = st.session_state.user_name
-=======
                 st.session_state.user_name
->>>>>>> refs/remotes/origin/main
                 
             else:
                 st.error("Senha e usuarios invalidos! :red_circle:")
