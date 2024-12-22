@@ -90,7 +90,7 @@ def login():
             if "user_name" not in st.session_state:
                 st.session_state.user_name = nome_usuario
 
-            elif nome_usuario == "ubiratansilva" and senha_usuario == "ok":
+            if nome_usuario == "ubiratansilva" and senha_usuario == "ok" or nome_usuario == "admin" and senha_usuario == "admin":
                 st.switch_page("pages/home.py")
                 
             else:
